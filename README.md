@@ -1,7 +1,6 @@
-# 🌦️ AI Weather Agent
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,50:1E40AF,100:38BDF8&height=220&section=header&text=AI%20WEATHER%20AGENT&fontSize=42&fontColor=FFFFFF&fontAlignY=38&desc=Intelligent%20Weather%20Information%20Assistant&descAlignY=58&descSize=16" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=shark&color=0:020617,50:312E81,100:0284C7&height=230&section=header&text=AI%20WEATHER%20AGENT&fontSize=44&fontColor=FFFFFF&fontAlignY=38&desc=SMART%20WEATHER%20SMARTER%20FUTURE&descAlignY=60&descSize=16&animation=twinkling" width="100%" />
 </p>
 
 <p align="center">
