@@ -26,7 +26,9 @@ The workflow is developed using n8n to demonstrate practical AI automation and a
 ## ⚙️ Workflow Architecture
 
 <p align="center">
-  <img src="screenshots/workflow.png" alt="AI Weather Agent Workflow Architecture" width="100%" />
+  <img src="./Screenshot/workflow.png"
+       alt="AI Weather Agent Workflow"
+       width="100%">
 </p>
 
 <p align="center"><em>Complete AI Weather Agent workflow built with n8n.</em></p>
