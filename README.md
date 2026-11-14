@@ -31,15 +31,13 @@ The workflow is developed using n8n to demonstrate practical AI automation and a
        width="100%">
 </p>
 
-<p align="center"><em>Complete AI Weather Agent workflow built with n8n.</em></p>
-
-## 🖥️ Output Preview
-
 <p align="center">
-  <img src="screenshots/output-result.png" alt="AI Weather Agent Output Result" width="100%" />
+  <a href="./Workflow/weather-agent.json">
+    ⬇️ Download AI Weather Agent Workflow
+  </a>
 </p>
 
-<p align="center"><em>Weather Agent execution output.</em></p>
+
 
 ## ✨ Key Features
 
