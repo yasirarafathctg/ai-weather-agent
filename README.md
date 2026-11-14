@@ -31,12 +31,6 @@ The workflow is developed using n8n to demonstrate practical AI automation and a
        width="100%">
 </p>
 
-<p align="center">
-  <a href="./Workflow/weather-agent.json">
-    ⬇️ Download AI Weather Agent Workflow
-  </a>
-</p>
-
 
 
 ## ✨ Key Features
@@ -59,17 +53,11 @@ The workflow is developed using n8n to demonstrate practical AI automation and a
 
 *Update this list if your actual workflow uses additional services or specific models.*
 
-## 🎬 Project Demo
-
-Watch the complete demonstration of the AI Weather Agent.
-
-**[▶️ Watch Full Project Demo](YOUR_GOOGLE_DRIVE_VIDEO_LINK)**
-
-## 📂 Workflow Files
-
-Download the complete n8n workflow:
-
-**[⬇️ Download AI Weather Agent JSON](workflow/weather-agent.json)**
+<p align="center">
+  <a href="./Workflow/weather-agent.json">
+    ⬇️ Download AI Weather Agent Workflow
+  </a>
+</p>
 
 ### How to Import
 
