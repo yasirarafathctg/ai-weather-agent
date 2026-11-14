@@ -1,0 +1,124 @@
+{
+  "name": "Weather Agent",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.5,
+      "position": [
+        -96,
+        0
+      ],
+      "id": "d4f1d327-3cb2-47f1-8a60-f3d37535b63b",
+      "name": "When chat message received",
+      "webhookId": "68a16d9a-8fa1-406f-84c6-2c3985f796c6"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=you are a weather agent: make a wather report on user querry: {{ $json.location.name }}\n\nand while preparing the report use following data:{{ $json.current.temp_c }}\n{{ $json.current.wind_mph }}\n{{ $json.current.precip_mm }}\n{{ $json.current.will_it_rain }}\n{{ $json.location.localtime }}",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        448,
+        0
+      ],
+      "id": "b6022a6f-cce0-4fff-ab73-c408f1694241",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4o-mini"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        96,
+        208
+      ],
+      "id": "73571300-8aa9-4375-8b0f-23a5abc6697d",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": null,
+          "name": "",
+          "__aiGatewayManaged": true
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://api.weatherapi.com/v1/current.json?key=95224472947948c78a142610261311&q= {{ $json.chatInput }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        128,
+        0
+      ],
+      "id": "ee2a6d23-3cc3-4ba6-ac60-c70dcfdc6c51",
+      "name": "HTTP Request"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "a50e64f8-39de-4527-904a-71ef18a0147e",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "e755a105efca9d9a976e4259f1967ba10f358313d11d99b5d710b8f04952cd0c"
+  },
+  "nodeGroups": [],
+  "id": "UDhdtK7E45nVmmW0",
+  "tags": []
+}
